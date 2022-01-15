@@ -3,6 +3,7 @@ import {
   Navbar,
   Main,
   Why,
+  Footer
 } from '../components'
 
 export const Home = () => {
@@ -11,6 +12,7 @@ export const Home = () => {
       <Navbar />
       <Main />
       <Why />
+      <Footer />
     </div>
   )
 }
