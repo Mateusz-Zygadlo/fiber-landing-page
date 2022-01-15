@@ -32,7 +32,7 @@ export const Main = () => {
         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold">{h1}</h1>
         <p className="text-md lg:text-lg text-gray-700 mt-3">{p}</p>
         <div className="my-5 flex flex-col sm:flex-row items-center">
-          <Button wFull>{under_p.button_text}</Button>
+          <Button wSmFull>{under_p.button_text}</Button>
           <a href='/' className="mt-2 ml-4 md:mt-0 md:ml-8 text-lg text-violet border-b-2 border-violet hover:border-black hover:text-black transition-colors duration-500">{under_p.a_text}</a>
         </div>
         <ul className="flex flex-col lg:flex-row">

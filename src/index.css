@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .reasons-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  }
+  .reviews-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+  }
+  @media only screen and (max-width: 600px){
+    .reasons-grid {
+      display: block;
+    }
+    .reviews-grid {
+      display: block;
+    }
+  }
+}
