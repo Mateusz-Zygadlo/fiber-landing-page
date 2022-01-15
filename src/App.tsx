@@ -1,9 +1,6 @@
 import React from 'react'
+import { Home } from './pages'
 
 export const App = () => {
-  return(
-    <div>
-      <h1 className="text-6xl">App page</h1>
-    </div>
-  )
+  return <Home />
 }
