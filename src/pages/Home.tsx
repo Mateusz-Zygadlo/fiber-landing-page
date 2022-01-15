@@ -1,10 +1,12 @@
 import React from 'react'
 import { 
   Navbar,
-  Main,
-  Why,
   Footer
 } from '../components'
+import {
+  Main,
+  Why
+} from '../components/home'
 
 export const Home = () => {
   return (

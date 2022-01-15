@@ -1,6 +1,21 @@
 import React from 'react'
-import { Home } from './pages'
+import {  
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom'
+import { 
+  Home,
+  SignUp 
+} from './pages'
 
 export const App = () => {
-  return <Home />
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/register' element={<SignUp />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }

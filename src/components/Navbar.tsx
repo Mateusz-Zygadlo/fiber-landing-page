@@ -5,19 +5,19 @@ import { Button } from './Button'
 import { Images } from '../assets'
 
 interface NavbarProps {
-  login?: boolean;
+  auth?: boolean;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ login }) => {
+export const Navbar: React.FC<NavbarProps> = ({ auth }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { width } = useWindowSize()
 
   return (
-    <div className="sticky -top-1 px-5 md:px-16 lg:px-24 py-4 bg-beige z-50">
+    <div className={`sticky -top-1 px-5 md:px-16 lg:px-24 py-4 ${auth ? 'bg-white' : 'bg-beige'} z-50`}>
       <div className="flex items-center justify-between relative">
         <h1 className="text-2xl font-extrabold">Fiber</h1>
         <>
-          {login ? null : (
+          {auth ? null : (
             <>
               {width > TABLET_SIZE ? (
                 <>
