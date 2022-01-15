@@ -1,32 +1,18 @@
-import React ,{
-  useState,
-  useEffect
-} from 'react'
-import { 
-  useWindowSize,
-  useMeasure
-} from '../hooks'
-import { MOBILE_WIDTH } from '../constants'
+import React , { useState } from 'react'
+import { useWindowSize } from '../hooks'
+import { TABLET_SIZE } from '../constants'
 import { Button } from './Button'
 import { Images } from '../assets'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [rect, myRef]: any = useMeasure()
-  const { width, setWidth } = useWindowSize()
-
-  useEffect(() => {
-    if(rect) setWidth(rect.width)
-  }, [rect])
+  const { width } = useWindowSize()
 
   return (
-    <div 
-      className="sticky -top-1 px-5 md:px-16 lg:px-24 py-4 bg-white z-50"
-      ref={myRef}
-    >
+    <div className="sticky -top-1 px-5 md:px-16 lg:px-24 py-4 bg-beige z-50">
       <div className="flex items-center justify-between relative">
         <h1 className="text-2xl font-extrabold">Fiber</h1>
-        {width > MOBILE_WIDTH ? (
+        {width > TABLET_SIZE ? (
           <>
             <ul className="flex items-center text-gray-800">
               <li className="text-xl mx-3 cursor-pointer border-b hover:border-black transition-colors duration-300">Community</li>

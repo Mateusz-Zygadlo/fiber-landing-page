@@ -4,21 +4,10 @@ import React, {
 } from 'react'
 
 export const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: 0,
-    setWidth(rect: number){
-      setWindowSize({
-        ...windowSize,
-        width: rect
-      })
-    }
-  })
+  const [windowSize, setWindowSize] = useState({ width: window.innerWidth })
 
   useEffect(() => {
-    const getWindowSize = () => setWindowSize({
-      ...windowSize,
-      width: window.innerWidth
-    })
+    const getWindowSize = () => setWindowSize({ width: window.innerWidth })
     window.addEventListener('resize', getWindowSize)
 
     return () => window.removeEventListener('resize', getWindowSize)
